@@ -12,10 +12,10 @@ Plug 'ervandew/supertab'
 " Plug 'garbas/vim-snipmate'
 "Plug 'glidenote/memolist.vim'
 Plug 'gorkunov/smartpairs.vim'
-Plug 'gregsexton/MatchTag', { 'for': 'html' }
+" Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'honza/vim-snippets'
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle' }
-Plug 'junegunn/vim-easy-align'
+" Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-gtfo'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'kien/ctrlp.vim'
@@ -34,7 +34,8 @@ Plug 'scrooloose/syntastic'
 Plug 'Lokaltog/vim-powerline'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/AutoClose'
+" Plug 'vim-scripts/AutoClose'
+Plug 'Townk/vim-autoclose'
 Plug 'vim-scripts/tComment'
 "Plug 'vim-scripts/taglist.vim', { 'on':  'TlistToggle' }
 call plug#end()
@@ -126,3 +127,13 @@ nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
+function! ClipboardYank()
+  call system('xclip -i -selection clipboard', @@)
+endfunction
+function! ClipboardPaste()
+  let @@ = system('xclip -o -selection clipboard')
+endfunction
+
+vnoremap <silent> y y:call ClipboardYank()<cr>
+vnoremap <silent> d d:call ClipboardYank()<cr>
+nnoremap <silent> p :call ClipboardPaste()<cr>p
