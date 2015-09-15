@@ -1,35 +1,34 @@
 call plug#begin('~/.vim/plugged')
 "Plug 'Chronial/browser.vim'
 "Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'Yggdroot/indentLine'
-"Plug 'airblade/vim-gitgutter'
 " Plug 'antoyo/vim-licenses'
 " Plug 'benjaminwhite/Benokai'
+" Plug 'garbas/vim-snipmate'
+"Plug 'glidenote/memolist.vim'
+" Plug 'gregsexton/MatchTag', { 'for': 'html' }
+"Plug 'kshenoy/vim-signature'
+"Plug 'tpope/vim-repeat'
+
+Plug 'Yggdroot/indentLine'
+Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-visual-star-search'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'ervandew/supertab'
-" Plug 'garbas/vim-snipmate'
-"Plug 'glidenote/memolist.vim'
 Plug 'gorkunov/smartpairs.vim'
-" Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'honza/vim-snippets'
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle' }
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-gtfo'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'kien/ctrlp.vim'
-"Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
-"Plug 'terryma/vim-multiple-cursors'
-"Plug 'terryma/vim-smooth-scroll'
-"Plug 'tomtom/tlib_vim'
-"Plug 'tpope/vim-fugitive'
-"Plug 'tpope/vim-repeat'
+Plug 'terryma/vim-smooth-scroll'
+Plug 'tpope/vim-fugitive'
 Plug 'Lokaltog/vim-powerline'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'tpope/vim-surround'
@@ -39,6 +38,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-scripts/taglist.vim', { 'on':  'TlistToggle' }
 Plug 'mtth/scratch.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
@@ -141,7 +141,14 @@ if executable("ag")
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
 endif
+let g:airline_powerline_fonts = 1
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-" let g:airline_powerline_fonts = 1
-" let g:limelight_conceal_ctermfg = 'gray'
-" let g:limelight_conceal_ctermfg = 240
+" let g:indentLine_char = '.'
+let g:indentLine_color_term = 239
+
