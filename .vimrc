@@ -29,7 +29,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
-Plug 'Lokaltog/vim-powerline'
+" Plug 'powerline/powerline'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
@@ -141,7 +141,6 @@ if executable("ag")
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
 endif
-let g:airline_powerline_fonts = 1
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
@@ -151,4 +150,4 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " let g:indentLine_char = '.'
 let g:indentLine_color_term = 239
-
+let g:indentLine_fileType = ['python', 'javascript']
