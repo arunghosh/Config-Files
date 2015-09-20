@@ -38,7 +38,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-scripts/taglist.vim', { 'on':  'TlistToggle' }
 Plug 'mtth/scratch.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
