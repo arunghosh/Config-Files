@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'kshenoy/vim-signature'
 "Plug 'tpope/vim-repeat'
 
+Plug 'pangloss/vim-javascript'
+Plug 'burnettk/vim-angular'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-visual-star-search'
@@ -29,7 +31,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
-" Plug 'powerline/powerline'
+Plug 'powerline/powerline'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
@@ -43,8 +45,8 @@ call plug#end()
 
 
 
-set shiftwidth=2 softtabstop=2
-set tabstop=3
+set shiftwidth=4 softtabstop=4
+set tabstop=4
 set autoindent
 set smartindent
 set relativenumber
