@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'kshenoy/vim-signature'
 "Plug 'tpope/vim-repeat'
 
+Plug 'Slava/tern-meteor'
 Plug 'pangloss/vim-javascript'
 Plug 'burnettk/vim-angular'
 Plug 'Yggdroot/indentLine'
@@ -28,7 +29,7 @@ Plug 'mattn/emmet-vim'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
 Plug 'powerline/powerline'
@@ -90,13 +91,13 @@ if has('gui_running')
    set guioptions-=r "remove right-hand scroll bar
    set guioptions-=L "remove left-hand scroll barendif
 endif
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 let g:user_emmet_leader_key='<C-X>'
 let g:syntastic_mode_map = {
 \ "mode": "active",
