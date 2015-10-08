@@ -1,7 +1,7 @@
 set -o verbose
 echo Sync Desktop Files
 cd ~/Desktop
-git add .
+git add -A
 git ci -m"auto sync"
 git push
 
