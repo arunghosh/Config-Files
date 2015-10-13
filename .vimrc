@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'kshenoy/vim-signature'
 "Plug 'tpope/vim-repeat'
 
+Plug 'vim-scripts/html-improved-indentation'
 Plug 'Slava/tern-meteor'
 Plug 'pangloss/vim-javascript'
 Plug 'burnettk/vim-angular'
