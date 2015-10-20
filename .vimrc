@@ -41,7 +41,9 @@ Plug 'vim-scripts/tComment'
 Plug 'bling/vim-airline'
 Plug 'vim-scripts/taglist.vim', { 'on':  'TlistToggle' }
 Plug 'mtth/scratch.vim'
+Plug 'tmhedberg/matchit'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'jiangmiao/auto-pairs'
 " Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
