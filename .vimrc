@@ -176,3 +176,5 @@ function! ToggleErrors()
     endif
 endfunction
 nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
+" for hypen auto-complete
+set iskeyword+=\-
