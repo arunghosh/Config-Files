@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'kshenoy/vim-signature'
 
 " Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-unimpaired'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'ternjs/tern_for_vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'altercation/vim-colors-solarized'
@@ -64,11 +66,15 @@ let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='hard'
 let g:solarized_termcolors=256
 colorscheme gruvbox
-set background=dark
+colorscheme PaperColor
+" colorscheme pyte
+set background=light
+let g:airline_theme='PaperColor'
+let g:lightline = { 'colorscheme': 'PaperColor' }
 
 set ignorecase
 set smartcase
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+" autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 filetype on
 
 filetype plugin indent on
@@ -108,8 +114,8 @@ let g:syntastic_check_on_wq = 0
 let g:user_emmet_leader_key='<C-X>'
 let g:syntastic_mode_map = {
 \ "mode": "active",
-\ "active_filetypes": ["python", "javascript"],
-\ "passive_filetypes": ["html"] }
+\ "active_filetypes": ["python"],
+\ "passive_filetypes": ["html", "javascript"] }
 " let g:syntastic_quiet_messages = {
 " \ "!level": "errors",
 " \ "type": "style",}
@@ -155,7 +161,7 @@ let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
 let g:indentLine_char = '|'
-let g:indentLine_color_term = 'black'
+let g:indentLine_color_term = 'gray'
 let g:indentLine_fileType = ['python', 'javascript']
 
 " insert mode hightlight
@@ -178,3 +184,6 @@ endfunction
 nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
 " for hypen auto-complete
 set iskeyword+=\-
+
+" ctrl-p ignore folders
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/bower_components,*/node_modules
