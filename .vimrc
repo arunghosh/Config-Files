@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-unimpaired'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'ternjs/tern_for_vim'
+" Plug 'ternjs/tern_for_vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/html-improved-indentation'
@@ -65,9 +65,8 @@ set t_Co=256
 let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='hard'
 let g:solarized_termcolors=256
-colorscheme gruvbox
+" colorscheme gruvbox
 colorscheme PaperColor
-" colorscheme pyte
 set background=light
 let g:airline_theme='PaperColor'
 let g:lightline = { 'colorscheme': 'PaperColor' }
@@ -99,10 +98,12 @@ nnoremap tj ;tabnext<CR>
 nnoremap tk ;tabprev<CR>
 nnoremap tl ;tablast<CR>
 if has('gui_running')
-   set guioptions-=T " no toolbar
+   set guioptions-=m "remove menubar
    set guioptions-=T "remove toolbar
    set guioptions-=r "remove right-hand scroll bar
    set guioptions-=L "remove left-hand scroll barendif
+   set guifont=Monaco\ 9
+   " set guifont=Liberation\ Mono\ 9
 endif
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
@@ -187,3 +188,7 @@ set iskeyword+=\-
 
 " ctrl-p ignore folders
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/bower_components,*/node_modules
+
+" Search options
+set incsearch
+set incsearch
