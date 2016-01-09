@@ -9,6 +9,9 @@ call plug#begin('~/.vim/plugged')
 "Plug 'kshenoy/vim-signature'
 
 " Plug 'Valloric/YouCompleteMe'
+Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-unimpaired'
 Plug 'NLKNguyen/papercolor-theme'
 " Plug 'ternjs/tern_for_vim'
@@ -103,6 +106,7 @@ if has('gui_running')
    set guioptions-=r "remove right-hand scroll bar
    set guioptions-=L "remove left-hand scroll barendif
    set guifont=Monaco\ 9
+   set guifont=Hack\ 9
    " set guifont=Liberation\ Mono\ 9
 endif
 " set statusline+=%#warningmsg#
@@ -192,3 +196,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/bower_componen
 " Search options
 set incsearch
 set incsearch
+
+" Flash while yanking
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
