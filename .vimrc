@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'kshenoy/vim-signature'
 
 " Plug 'Valloric/YouCompleteMe'
+Plug 'heavenshell/vim-jsdoc'
 Plug 'kana/vim-operator-user'
 Plug 'haya14busa/vim-operator-flashy'
 Plug 'dhruvasagar/vim-table-mode'
