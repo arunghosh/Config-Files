@@ -171,8 +171,8 @@ let g:indentLine_color_term = 'gray'
 let g:indentLine_fileType = ['python', 'javascript']
 
 " insert mode hightlight
-autocmd InsertEnter * set cul
-autocmd InsertLeave * set nocul
+autocmd InsertEnter * set nocul
+autocmd InsertLeave * set cul
 
 " noremap <silent> <C-S>          :update<CR>
 " vnoremap <silent> <C-S>         <C-C>:update<CR>
