@@ -29,7 +29,11 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'ervandew/supertab'
 Plug 'gorkunov/smartpairs.vim'
 Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle' }
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-gtfo'
 Plug 'justinmk/vim-syntax-extra'
@@ -37,9 +41,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'nvie/vim-flake8', { 'for': 'python' }
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'tpope/vim-fugitive'
 Plug 'powerline/powerline'
@@ -192,12 +193,19 @@ nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
 set iskeyword+=\-
 
 " ctrl-p ignore folders
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/bower_components,*/node_modules
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/bower_components,*/node_modules,*/dist
 
 " Search options
 set incsearch
 set incsearch
 
+" NERDTree size
+let g:NERDTreeWinSize=40
+
 " Flash while yanking
-map y <Plug>(operator-flashy)
-nmap Y <Plug>(operator-flashy)$
+" map y <Plug>(operator-flashy)
+" nmap Y <Plug>(operator-flashy)$
+
+" improve scroll speed
+set lazyredraw
+set ttyfast
