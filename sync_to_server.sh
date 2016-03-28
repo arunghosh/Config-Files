@@ -1,11 +1,3 @@
-set -o verbose
-echo Sync Desktop Files
-cd ~/Desktop
-git add -A
-git ci -m"auto sync"
-git push
-
-
 echo "Sync Config Files"
 config_path=~/Scratch/Config-Files/
 cp ~/.vimrc $config_path 
